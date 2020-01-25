@@ -1,0 +1,188 @@
+@import './colors';
+
+.app {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, a, p, label {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .input-group {
+    input {
+      padding:1px 8px;
+      width: 100%;
+      line-height: 30px;
+      border-radius: 4px;
+      background-color: $grey;
+      color: $grey-text;
+
+      &::placeholder {
+        color: $grey-text;
+      }
+    }
+
+    +.input-group {
+      margin-top: 15px;
+    }
+  }
+
+  //Input
+  .input-container {
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    background-color: $grey;
+    border-radius: 8px;
+
+    .input-label {
+      padding: 0 10px;
+      border-right: 2px solid $grey-text;
+      cursor: pointer;
+
+      +input {
+        width: 100%;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+  }
+
+  .input-label, input {
+    color: $grey-text;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 24px;
+
+    &::placeholder {
+      color: $grey-text;
+    }
+  }
+
+  //Button
+  .btn-group {
+    display: flex;
+    justify-content: center;
+
+    .btn + .btn {
+      margin-left: 20px;
+    }
+  }
+
+  .btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: $white;
+
+    &.primary-btn {
+      background-color: $blue;
+    }
+
+    &.success-btn {
+      background-color: $green;
+    }
+
+    &.info-btn {
+      background-color: $light-blue;
+    }
+
+    &.danger-btn {
+      background-color: $red;
+    }
+  }
+
+  .layout {
+    margin: 10px 20px;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .contact-list-header {
+      display: flex;
+      align-items: center;
+
+      .input-container {
+        height: 32px;
+        vertical-align: middle;
+        line-height: 48px;
+      }
+
+      .add-contact {
+        margin-left: 20px;
+        height: 48px;
+        vertical-align: middle;
+        line-height: 48px;
+      }
+    }
+
+    .contact-list-container {
+      padding: 20px 0;
+      overflow: auto;
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+          th, td {
+            padding: 8px;
+            border: 1px solid $black;
+          }
+
+          th {
+            min-width: 130px;
+          }
+
+          td {
+            text-align: center;
+            vertical-align: middle;
+            height: 40px;
+
+            img {
+              height: 100%;
+            }
+
+            &.action {
+              .btn {
+                width: 65px;
+              }
+            }
+          }
+
+          .left-align {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form-modal {
+    width: 500px;
+
+    .contact-form {
+      margin-top: 20px;
+    }
+
+    .contact-form-footer {
+      margin-top: 20px;
+      justify-content: flex-end;
+    }
+  }
+}
